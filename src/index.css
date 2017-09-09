@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  background: #B3E5FC;
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(bottom, #0288D1 0, #B3E5FC 100%);
+  background: linear-gradient(to top, #0288D1 0, #B3E5FC 100%);
+  border-radius: 6px;
+}
+::selection {
+  color: #0288D1;
+  -webkit-text-fill-color: #0288D1;
+}

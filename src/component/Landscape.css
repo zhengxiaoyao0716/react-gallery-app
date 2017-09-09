@@ -1,0 +1,46 @@
+.Landscape,  .Landscape>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.Landscape>div {
+    transition: transform 0.6s cubic-bezier(0.6, 0.3, 0.25, 0.7);
+}
+.Landscape>div.last {
+    transform: translate(-160%);
+}
+.Landscape>div.next {
+    pointer-events: visible;
+    cursor: pointer;
+    transform: translate(64%);
+}
+.Landscape>div.hide {
+    transition: none;
+    transform: translate(160%);
+}
+.Landscape {	
+    counter-reset: landscape_count;
+}
+.Landscape>div::before {
+    counter-increment: landscape_count;
+    content: "0"counter(landscape_count);
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    color: #fff;
+    font-size: 2em;
+    font-style: italic;
+    transition: left 0.6s cubic-bezier(0.6, 0.3, 0.25, 0.7);
+}
+.Landscape>div.next::before {
+    left: 25%;
+}
+.Landscape>div.next:hover {
+    pointer-events: visible;
+    cursor: pointer;
+    transform: translate(60%);
+}
+.Landscape>div.next:hover::before {
+    left: 20%;
+}
